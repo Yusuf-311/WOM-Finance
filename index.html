@@ -1,0 +1,1756 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WOM Finance</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Around - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon_wom.webp"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon_wom.webp"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon_wom.webp"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/lightgallery.js/dist/css/lightgallery.min.css"
+    />
+    <link rel="stylesheet" href="vendor/tiny-slider/dist/tiny-slider.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <header
+        class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky"
+        data-scroll-header
+        data-fixed-element
+      >
+        <div class="container px-0 px-xl-3">
+          <button
+            class="navbar-toggler ms-n2 me-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu"
+          >
+            <span class="navbar-toggler-icon"></span></button
+          ><a
+            class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
+            href="index.html"
+            ><img
+              class="d-none d-lg-block"
+              src="images/wom-finance-logo (1).webp"
+              alt="Around"
+              width="153" /><img
+              class="d-lg-none"
+              src="images/logo/logo-icon.png"
+              alt="Around"
+              width="58"
+          /></a>
+          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+            <a
+              class="nav-link-style fs-sm text-nowrap"
+              href="#modal-signin"
+              data-bs-toggle="modal"
+              data-view="#modal-signin-view"
+              ><i class="ai-user fs-xl me-2 align-middle"></i>Sign in</a
+            ><a
+              class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block"
+              href="#modal-signin"
+              data-bs-toggle="modal"
+              data-view="#modal-signup-view"
+              >Sign up</a
+            >
+          </div>
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="btn-close lead"
+                type="button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Demos</a
+                  >
+                  <div class="dropdown-menu">
+                    <a
+                      class="dropdown-column dropdown-column-img bg-secondary"
+                      href="index.html"
+                      style="background-image: url(images/demo/menu-banner.jpg)"
+                    ></a>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="index.html"
+                        >Web Template Presentation</a
+                      ><a
+                        class="dropdown-item"
+                        href="demo-business-consulting.html"
+                        >Business Consulting</a
+                      ><a class="dropdown-item" href="demo-shop-homepage.html"
+                        >Shop Homepage</a
+                      ><a
+                        class="dropdown-item"
+                        href="demo-booking-directory.html"
+                        >Booking / Directory</a
+                      ><a class="dropdown-item" href="demo-creative-agency.html"
+                        >Creative Agency</a
+                      ><a class="dropdown-item" href="demo-web-studio.html"
+                        >Web Studio</a
+                      ><a
+                        class="dropdown-item"
+                        href="demo-product-software.html"
+                        >Product Landing - Software</a
+                      >
+                    </div>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="demo-product-gadget.html"
+                        >Product Landing - Gadget</a
+                      ><a class="dropdown-item" href="demo-mobile-app.html"
+                        >Mobile App Showcase</a
+                      ><a class="dropdown-item" href="demo-coworking-space.html"
+                        >Coworking Space</a
+                      ><a class="dropdown-item" href="demo-event-landing.html"
+                        >Event Landing</a
+                      ><a class="dropdown-item" href="demo-marketing-seo.html"
+                        >Digital Marketing &amp; SEO</a
+                      ><a class="dropdown-item" href="demo-food-blog.html"
+                        >Food Blog</a
+                      ><a
+                        class="dropdown-item"
+                        href="demo-personal-portfolio.html"
+                        >Personal Portfolio</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Templates</a
+                  >
+                  <div class="dropdown-menu">
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Blog</h5>
+                      <a class="dropdown-item" href="blog-grid-rs.html"
+                        >Grid Right Sidebar</a
+                      ><a class="dropdown-item" href="blog-grid-ls.html"
+                        >Grid Left Sidebar</a
+                      ><a class="dropdown-item" href="blog-grid-ns.html"
+                        >Grid No Sidebar</a
+                      ><a class="dropdown-item" href="blog-list-rs.html"
+                        >List Right Sidebar</a
+                      ><a class="dropdown-item" href="blog-list-ls.html"
+                        >List Left Sidebar</a
+                      ><a class="dropdown-item" href="blog-list-ns.html"
+                        >List No Sidebar</a
+                      ><a class="dropdown-item" href="blog-single-rs.html"
+                        >Single Post Right Sidebar</a
+                      ><a class="dropdown-item" href="blog-single-ls.html"
+                        >Single Post Left Sidebar</a
+                      ><a class="dropdown-item" href="blog-single-ns.html"
+                        >Single Post No Sidebar</a
+                      >
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Portfolio</h5>
+                      <a class="dropdown-item" href="portfolio-style-1.html"
+                        >Grid Style 1</a
+                      ><a class="dropdown-item" href="portfolio-style-2.html"
+                        >Grid Style 2</a
+                      ><a class="dropdown-item" href="portfolio-style-3.html"
+                        >Grid Style 3</a
+                      ><a
+                        class="dropdown-item"
+                        href="portfolio-single-side-gallery-grid.html"
+                        >Project Side Gallery (Grid)</a
+                      ><a
+                        class="dropdown-item"
+                        href="portfolio-single-side-gallery-list.html"
+                        >Project Side Gallery (List)</a
+                      ><a
+                        class="dropdown-item"
+                        href="portfolio-single-carousel.html"
+                        >Project Carousel</a
+                      ><a
+                        class="dropdown-item"
+                        href="portfolio-single-wide-gallery.html"
+                        >Project Wide Gallery</a
+                      >
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Shop</h5>
+                      <a class="dropdown-item" href="shop-ls.html"
+                        >Grid Left Sidebar</a
+                      ><a class="dropdown-item" href="shop-rs.html"
+                        >Grid Right Sidebar</a
+                      ><a class="dropdown-item" href="shop-ns.html"
+                        >Grid No Sidebar</a
+                      ><a class="dropdown-item" href="shop-single.html"
+                        >Single Product</a
+                      ><a class="dropdown-item" href="checkout.html"
+                        >Cart &amp; Checkout</a
+                      ><a class="dropdown-item" href="order-tracking.html"
+                        >Order Tracking</a
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Account</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >Dashboard</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="dashboard-orders.html"
+                            >Orders</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="dashboard-sales.html"
+                            >Sales</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="dashboard-messages.html"
+                            >Messages</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="dashboard-followers.html"
+                            >Followers</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="dashboard-reviews.html"
+                            >Reviews</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="dashboard-favorites.html"
+                            >Favorites</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >Account Settings</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="account-profile.html"
+                            >Profile Info</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="account-payment.html"
+                            >Payment Methods</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="account-notifications.html"
+                            >Notifications</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="signin-illustration.html"
+                        >Sign In - Illustration</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="signin-image.html"
+                        >Sign In - Image</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="signin-signup.html"
+                        >Sign In - Sign Up</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="password-recovery.html"
+                        >Password Recovery</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Pages</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="about.html">About</a>
+                    </li>
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >Contacts</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="contacts-v1.html"
+                            >Contacts v.1</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="contacts-v2.html"
+                            >Contacts v.2</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="contacts-v3.html"
+                            >Contacts v.3</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >Help Center</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="help-topics.html"
+                            >Help Topics</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="help-single-topic.html"
+                            >Single Topic</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="help-submit-request.html"
+                            >Submit a Request</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >404 Not Found</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="404-simple.html"
+                            >Simple Text</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="404-illustration.html"
+                            >Illustration</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        >Coming Soon</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="coming-soon-image.html"
+                            >Image</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="coming-soon-illustration.html"
+                            >Illustration</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Docs / UI Kit</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="docs/dev-setup.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted">
+                            <i class="ai-file-text"></i>
+                          </div>
+                          <div class="ps-3">
+                            <span class="d-block text-heading"
+                              >Documentation</span
+                            ><small class="d-block text-muted"
+                              >Kick-start customization</small
+                            >
+                          </div>
+                        </div></a
+                      >
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="components/typography.html"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted">
+                            <i class="ai-layers"></i>
+                          </div>
+                          <div class="ps-3">
+                            <span class="d-block text-heading"
+                              >UI Kit<span class="badge bg-danger ms-2"
+                                >50+</span
+                              ></span
+                            ><small class="d-block text-muted"
+                              >Flexible components</small
+                            >
+                          </div>
+                        </div></a
+                      >
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a class="dropdown-item" href="docs/changelog.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted">
+                            <i class="ai-edit"></i>
+                          </div>
+                          <div class="ps-3">
+                            <span class="d-block text-heading"
+                              >Changelog<span class="badge bg-success ms-2"
+                                >v2.2.0</span
+                              ></span
+                            ><small class="d-block text-muted"
+                              >Regular updates</small
+                            >
+                          </div>
+                        </div></a
+                      >
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="mailto:support@createx.studio"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted">
+                            <i class="ai-life-buoy"></i>
+                          </div>
+                          <div class="ps-3">
+                            <span class="d-block text-heading">Support</span
+                            ><small class="d-block text-muted"
+                              >support@createx.studio</small
+                            >
+                          </div>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/ombak-reguler-website-okt-2024_1320x560 (1).webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/waspada-penipuan-web_1320x560.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/wombastis-2024-web_banner-utama-1320-x-5601.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/new---banner-utama---suku-bunga.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/promo-bpjs-web_1320x560.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/baner-utama-1320x560.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/banner-utama_1320x560.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/cgc-motorku-2023-web_banner-utama--1320-x-560.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/faq-banner-web-resize-2_1320-x-560-1.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/faq-wom-juli-2023-web_banner-utama--1320-x-560-1.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/lindungi-password-kawan_1320x560-1.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Service -->
+      <section class="container py-5 py-md-6 py-lg-7 my-3">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-5 text-center text-md-start mb-5 mb-md-0">
+            <h2 class="mb-3">Pilih Solusi Pembiayaan Sesuai Kebutuhan</h2>
+            <p class="text-muted mb-4 pb-2">
+              Find aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint doloremque.
+            </p>
+          </div>
+          <div class="col-lg-8 col-md-7 bg-position-center bg-repeat-0">
+            <div class="mx-auto" style="max-width: 610px">
+              <div class="row align-items-center">
+                <div class="col-sm-6">
+                  <div
+                    class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      src="images/multiguna-motorku.svg"
+                      alt="Icon"
+                      width="100"
+                    />
+                    <h3 class="h5 mb-2">MotorKu</h3>
+                    <p class="fs-sm">
+                      Ayo, penuhi kebutuhan pembiayaanmu dengan jaminan BPKB
+                      motor di WOM Finance yang prosesnya mudah dan cepat.
+                    </p>
+                    <a class="btn btn-outline-primary" href="#">Ajukan</a>
+                  </div>
+                  <div
+                    class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      src="images/icon-web4_transfarant.svg"
+                      alt="Icon"
+                      width="100"
+                    />
+                    <h3 class="h5 mb-2">Motor Baru</h3>
+                    <p class="fs-sm">
+                      Ayo, miliki motor idamanmu dengan pembiayaan motor baru
+                      dari WOM Finance yang prosesnya mudah dan cepat.
+                    </p>
+                    <a class="btn btn-outline-primary" href="#">Ajukan</a>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div
+                    class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      src="images/multiguna-mobilku.svg"
+                      alt="Icon"
+                      width="100"
+                    />
+                    <h3 class="h5 mb-2">MobilKu</h3>
+                    <p class="fs-sm">
+                      Ayo, penuhi kebutuhan pembiayaanmu dengan jaminan BPKB
+                      mobil di WOM Finance yang prosesnya mudah dan cepat.
+                    </p>
+                    <a class="btn btn-outline-primary" href="#">Ajukan</a>
+                  </div>
+                  <div
+                    class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      src="images/masku.svg"
+                      alt="Icon"
+                      width="100"
+                    />
+                    <h3 class="h5 mb-2">MASKu</h3>
+                    <p class="fs-sm">
+                      Ayo, cicil logam mulia MASKu dari WOM Finance yang
+                      dikelola dengan prinsip syariah.
+                    </p>
+                    <a class="btn btn-outline-primary" href="#">Ajukan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Promo -->
+      <section class="container">
+        <div class="tns-carousel-wrapper">
+          <div class="tns-outer" id="tns1-ow">
+            <div
+              class="tns-liveregion tns-visually-hidden"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              slide <span class="current">10 to 11</span> of 4
+            </div>
+            <div id="tns1-mw" class="tns-ovh">
+              <div class="tns-inner" id="tns1-iw">
+                <div
+                  class="tns-carousel-inner tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
+                  data-carousel-options='{"items": 3, "controls": false, "gutter": 24, "responsive": {"0":{"items":1},"560":{"items":2},"850":{"items":3}}}'
+                  id="tns1"
+                  style="transform: translate3d(-56.25%, 0px, 0px)"
+                >
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/promo 1.webp"
+                        alt="Accessories"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/promo 2.webp"
+                        alt="Kids"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/promo 3.webp"
+                        alt="Clothing"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layanan -->
+      <section class="bg-faded-primary position-relative py-md-7 py-5">
+        <div class="container my-2 my-md-0">
+          <div class="row align-items-center">
+            <div class="col-md-5 mb-md-0 mb-5 pb-md-0 pb-3">
+              <img
+                class="d-block mx-md-0 mx-auto"
+                src="images/layanan-kami.webp"
+                alt="Illustration"
+              />
+            </div>
+            <div
+              class="col-lg-6 offset-lg-1 col-md-7 text-md-start text-center"
+            >
+              <div class="mx-md-0 mx-auto" style="max-width: 500px">
+                <h2 class="mb-md-5 mb-4">
+                  Nikmati Berbagai Kemudahan Layanan dari WOM Finance
+                </h2>
+                <!-- Media item (Service)-->
+                <div class="d-md-flex align-items-start d-block mb-4 pb-2">
+                  <img
+                    class="me-md-4 mb-md-0 mb-4"
+                    src="images/icon-stopwatch.svg"
+                    alt="Icon"
+                  />
+                  <div class="ps-md-2">
+                    <h3 class="h6 mb-2">Cepat & Mudah</h3>
+                    <p class="mb-0 fs-sm">
+                      Menawarkan pembiayaan dengan persyaratan dokumen yang
+                      mudah, proses cepat, dan pilihan angsuran dan tenor yang
+                      sesuai kemampuan konsumen
+                    </p>
+                  </div>
+                </div>
+                <!-- Media item (Service)-->
+                <div class="d-md-flex align-items-start d-block mb-4 pb-2">
+                  <img
+                    class="me-md-4 mb-md-0 mb-4"
+                    src="images/icon-building.svg"
+                    alt="Icon"
+                  />
+                  <div class="ps-md-2">
+                    <h3 class="h6 mb-2">Jaringan Luas</h3>
+                    <p class="mb-0 fs-sm">
+                      Memiliki 167 lokasi pelayanan yang tersebar di Indonesia
+                    </p>
+                  </div>
+                </div>
+                <!-- Media item (Service)-->
+                <div class="d-md-flex align-items-start d-block">
+                  <img
+                    class="me-md-4 mb-md-0 mb-4"
+                    src="images/icon-button-click.svg"
+                    alt="Icon"
+                  />
+                  <div class="ps-md-2">
+                    <h3 class="h6 mb-2">Beragam Pembayaran</h3>
+                    <p class="mb-0 fs-sm">
+                      Bekerja sama dengan mitra pembayaran baik offline maupun
+                      online untuk memudahkan pembayaran tagihan tepat waktu
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape shape-top shape-curve bg-body">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+            <path
+              fill="currentColor"
+              d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Event dan artikel -->
+
+      <section class="container py-5">
+        <h2 class="mb-5 text-center">Event & Articles</h2>
+        <div class="tns-carousel-wrapper">
+          <div class="tns-outer" id="tns1-ow">
+            <div
+              class="tns-liveregion tns-visually-hidden"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              slide <span class="current">7 to 8</span> of 4
+            </div>
+            <div id="tns1-mw" class="tns-ovh">
+              <div class="tns-inner" id="tns1-iw">
+                <div
+                  class="tns-carousel-inner tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
+                  data-carousel-options='{"items": 3, "controls": false, "gutter": 24, "responsive": {"0":{"items":1},"560":{"items":2},"850":{"items":3}}}'
+                  id="tns1"
+                  style="
+                    transition-duration: 0s;
+                    transform: translate3d(-37.5%, 0px, 0px);
+                  "
+                >
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/lika liku.webp"
+                        alt="Accessories"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          Lika-liku Perjalanan Usaha Rental Motor Hingga Punya
+                          28 Motor
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/5 tips.webp"
+                        alt="Kids"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          5 Tips memilih Motor Baru yang Tepat Sesuai Kebutuhan
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/5_rahasia.webp"
+                        alt="Clothing"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          5 Rahasia Mengatur Keuangan Bisnis Rumah Makan
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/Makin_hits.webp"
+                        alt="Electronics"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          Makin Hits! 5 Rahasia Bikin Warung Seblak Prasmanan
+                          Ramai Pengunjung
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+                  <div
+                    class="pb-2 tns-item tns-slide-cloned"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  >
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/4 cara Mudah.webp"
+                        alt="Accessories"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          4 Cara Mudah Membuka Usaha Cireng dengan Modal
+                          Terjangkau
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+
+                  <!-- Category-->
+                  <div class="pb-2 tns-item tns-slide-active" id="tns1-item0">
+                    <a class="card card-category shadow mx-1" href="#"
+                      ><img
+                        class="card-img-top"
+                        src="images/Mau_mulai_usaha.webp"
+                        alt="Clothing"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title fw-medium">
+                          Mau Mulai Usaha Dimsum? Simak Ini Agar Usaha Ramai
+                        </h5>
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="container">
+        <div class="row">
+          <div class="col-4 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="text-center">
+                <img
+                  class="rounded-circle"
+                  src="images/Testimoni 1.jpg"
+                  width="50"
+                  height="25"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Muhammad Ikhsan Nawawi</h5>
+                <p class="card-text">
+                  WOM merupakan tempat dengan pelayanan yang baik, dan tempat
+                  berlabuh yang cepat. Pelayanan prima dan mantap membuat
+                  konsumen senang dan tidak ragu merekomendasikan WOM Finance.
+                  Jaya selalu WOM Finance!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Barada Giyantana</h5>
+                <p class="card-text"></p>
+                <ul>
+                  <li>Proses pengajuan mudah</li>
+                  <li>Persyaratan pengajuan mudah</li>
+                  <li>Hasil approval cepat</li>
+                  <li>Selalu di ingatkan ketika akan jatuh tempo by phone</li>
+                  <li>Pembayaran juga mudah bisa melalui E Channel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Bagja Nugraha</h5>
+                <p class="card-text">
+                  Excellent service. Especially for customer service named Restu
+                  in Cianjur branches. He solved each problomes promptly. Also,
+                  all staff are humble, smiling, and help to understand.
+                  offering product which has low interest rate
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro-->
+      <section class="container my-lg-2 pt-5 pb-lg-7">
+        <div class="row align-items-center">
+          <div class="col-lg-5 py-3 py-lg-0">
+            <h1>Our goals. Our mission.</h1>
+            <h2 class="h3">How we help other companies to grow.</h2>
+            <div class="py-4">
+              <p class="callout">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+            </div>
+            <a
+              class="btn-video btn-video-primary btn-video-sm me-3"
+              href="https://www.youtube.com/watch?v=hTu0a4o97dU"
+            ></a
+            ><span class="fs-sm text-muted">Get to know us better</span>
+          </div>
+          <div class="col-xl-6 col-lg-7 offset-xl-1 position-relative">
+            <div class="py-5" style="min-height: 543px">
+              <div
+                class="d-none d-lg-block position-absolute bg-no-repeat bg-position-center h-100"
+                style="
+                  top: 0;
+                  left: -45px;
+                  width: 646px;
+                  background-image: url(images/pages/about/bg-shape.svg);
+                "
+              ></div>
+              <div class="row g-0 mx-n2 pt-lg-4">
+                <div class="col-sm-4 px-2 mb-3">
+                  <a
+                    class="card h-100 card-body py-5 justify-content-center border-0 shadow-lg text-center"
+                    href="#"
+                    ><i class="ai-zap text-primary h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Boost</h3></a
+                  >
+                </div>
+                <div class="col-sm-4 px-2 mb-3">
+                  <a
+                    class="card card-body py-5 border-0 shadow-lg text-center mb-3"
+                    href="#"
+                    ><i class="ai-pie-chart text-danger h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Analize</h3></a
+                  ><a
+                    class="card card-body py-5 border-0 shadow-lg text-center"
+                    href="#"
+                    ><i class="ai-refresh-ccw text-info h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Automate</h3></a
+                  >
+                </div>
+                <div class="col-sm-4 px-2 mb-3">
+                  <a
+                    class="card card-body py-5 border-0 shadow-lg text-center mb-3"
+                    href="#"
+                    ><i class="ai-folder-plus text-success h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Create</h3></a
+                  ><a
+                    class="card card-body py-5 border-0 shadow-lg text-center"
+                    href="#"
+                    ><i class="ai-share text-warning h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Share</h3></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Statistics-->
+      <section class="bg-secondary py-5 mt-n4 mb-6 mt-lg-0 mb-lg-7">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">15</h3>
+              <p class="text-muted mb-0">Years of experience</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">2k+</h3>
+              <p class="text-muted mb-0">Employees worldwide</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">90%</h3>
+              <p class="text-muted mb-0">Positive feedback</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">100</h3>
+              <p class="text-muted mb-0">Successfully completed projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team-->
+      <section class="container mb-5 pb-3 pb-lg-0 mb-lg-7">
+        <h2 class="pb-4 mb-4 text-center">People behind our success</h2>
+        <div class="row mb-3">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a class="card-floating-icon" href="mailto:sarah.cole@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/01.jpg" alt="Sarah Cole" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Sarah Cole</h3>
+                <p class="fs-xs text-body mb-0">CEO, Co-Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:charlie.welch@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/02.jpg" alt="Charlie Welch" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Charlie Welch</h3>
+                <p class="fs-xs text-body mb-0">CTO, Co-Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a class="card-floating-icon" href="mailto:emma.brown@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/03.jpg" alt="Emma Brown" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Emma Brown</h3>
+                <p class="fs-xs text-body mb-0">Director of Marketing</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:rosalie.lyons@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/04.jpg" alt="Rosalie Lyons" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Rosalie Lyons</h3>
+                <p class="fs-xs text-body mb-0">Financial Director</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:jane.tanaka@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/05.jpg" alt="Jane Tanaka" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Jane Tanaka</h3>
+                <p class="fs-xs text-body mb-0">Lead PR Strategist</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:sanomi.smith@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/06.jpg" alt="Sanomi Smith" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Sanomi Smith</h3>
+                <p class="fs-xs text-body mb-0">Director of Human Resources</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:olivia.jones@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/07.jpg" alt="Olivia Jones" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Olivia Jones</h3>
+                <p class="fs-xs text-body mb-0">Content Manager</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div
+              class="card card-curved-body card-hover border-0 shadow mx-auto"
+              style="max-width: 21rem"
+            >
+              <a
+                class="card-floating-icon"
+                href="mailto:richard.davis@example.com"
+                ><i class="ai-mail"></i
+              ></a>
+              <div class="card-img-top card-img-gradient">
+                <img src="images/team/08.jpg" alt="Richard Davis" />
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">Richard Davis</h3>
+                <p class="fs-xs text-body mb-0">Lead Accountant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-body py-5 text-center text-md-end">
+          <div class="d-md-flex justify-content-center align-items-center">
+            <div class="mb-4 mb-md-0 me-md-5 me-lg-6 me-xl-7">
+              <h3>Want to be part of our team? We are hiring</h3>
+              <p class="text-muted mb-0">
+                Check our current opennings and submit your application
+              </p>
+            </div>
+            <a class="btn btn-gradient" href="#">Submit your application</a>
+          </div>
+        </div>
+      </section>
+      <!-- Clients-->
+      <section class="container pb-5 pb-lg-6">
+        <h2 class="mb-5 text-center">We work with world’s top companies</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/01_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/01_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/02_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/02_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/03_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/03_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/04_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/04_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/05_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/05_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/06_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/06_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/07_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/07_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/08_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/08_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/09_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/09_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/10_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/10_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/11_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/11_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter">
+            <a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image">
+                  <img
+                    class="swap-to"
+                    src="img/shop/brands/12_color.png"
+                    alt="Brand logo"
+                    width="150"
+                  /><img
+                    class="swap-from"
+                    src="img/shop/brands/12_gray.png"
+                    alt="Brand logo"
+                    width="150"
+                  />
+                </div></div
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark pt-5 pt-md-6">
+      <div class="container pt-3 pt-md-0">
+        <div class="row pb-3">
+          <div class="col-md-4 mt-n2 pb-3 pb-md-0 mb-4">
+            <a class="d-block mb-3" href="index.html" style="width: 153px"
+              ><img src="images/wom-finance-footer-logo (1).webp" alt="Around"
+            /></a>
+            <p class="fs-sm text-light opacity-60 pb-2 pb-sm-3">
+              Highly customizable and modular official multipurpose Bootstrap
+              template and UI kit.
+            </p>
+            <a
+              class="btn-social bs-outline bs-facebook bs-light bs-lg me-2 mb-2"
+              href="#"
+              ><i class="bi bi-facebook"></i></a
+            ><a
+              class="btn-social bs-outline bs-twitter bs-light bs-lg me-2 mb-2"
+              href="#"
+              ><i class="ai-twitter"></i></a
+            ><a
+              class="btn-social bs-outline bs-instagram bs-light bs-lg me-2 mb-2"
+              href="#"
+              ><i class="ai-instagram"></i></a
+            ><a
+              class="btn-social bs-outline bs-google bs-light bs-lg me-2 mb-2"
+              href="#"
+              ><i class="ai-google"></i
+            ></a>
+          </div>
+          <div class="col-md-2 col-sm-4 ms-auto pb-1 mb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title">Tentang Kami</h4>
+              <ul>
+                <li><a class="widget-link" href="#">About</a></li>
+                <li><a class="widget-link" href="#">Careers</a></li>
+                <li><a class="widget-link" href="#">Press</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 pb-1 mb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title">Communities</h4>
+              <ul>
+                <li><a class="widget-link" href="#">For artists</a></li>
+                <li><a class="widget-link" href="#">Developers</a></li>
+                <li><a class="widget-link" href="#">Brands</a></li>
+                <li><a class="widget-link" href="#">Investors</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 mb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title">Our news</h4>
+              <ul>
+                <li><a class="widget-link" href="#">Latest news</a></li>
+                <li><a class="widget-link" href="#">Updates</a></li>
+                <li><a class="widget-link" href="#">Campaigns</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-0 border-light" />
+        <div class="row align-items-center mt-3 py-4">
+          <div class="col-md-6 order-md-2 text-md-end mb-3">
+            <ul class="list-inline fs-sm mb-0">
+              <li class="list-inline-item">
+                <a class="nav-link-style nav-link-light" href="#">Support</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="nav-link-style nav-link-light" href="#">Contacts</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="nav-link-style nav-link-light" href="#"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 order-md-1 mb-3">
+            <p class="fs-sm mb-0">
+              <span class="text-light opacity-50 me-1"
+                >© All rights reserved. Made by</span
+              ><a
+                class="nav-link-style nav-link-light"
+                href="https://createx.studio/"
+                target="_blank"
+                rel="noopener"
+                >Createx Studio</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button--><a
+      class="btn-scroll-top"
+      href="#top"
+      data-scroll
+      data-fixed-element
+      ><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span
+      ><i class="btn-scroll-top-icon ai-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
